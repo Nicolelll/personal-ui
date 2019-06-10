@@ -6,7 +6,7 @@ import Input from './components/Input'
 ReactDOM.render(
     // <div>hello hhh</div>,
     <Input 
-        type='password'
+        type='phone'
         onError={() => console.log('this is not a phone number')}
     />,
     document.querySelector('#root')

@@ -5,16 +5,18 @@ class Input extends React.Component {
     state = {
         error: true,
         types: new Map([
-            ['phone', /^1+\d{10}$/]
+            ['phone', /^1+\d{10}$/],
         ]),
         message: 'ERROR！'
     }
-    componentDidMount() {
-        if (!this.state.types.get(this.props.type)) {
-            this.setState({
+    static getDerivedStateFromProps(nextProps, preState) {
+        // 是否需要进行错误判断（是否是自定义type类）
+        if (!preState.types.has(nextProps.type)){
+            return {
                 error: false
-            })
+            }
         }
+        return null
     }
     handleChange(regex) {
         if (regex) {
