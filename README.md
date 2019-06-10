@@ -1,2 +1,14 @@
 # webpackDemos
-第一版是基于webpack@4.x & babel@7.x 版本
+webpackDemo1 基于webpack@4.x & babel@6.x 版本 完成react的基本解析配置
+
+本文项目结构如下
+`<img src='./static/category.jpg' />`
+
+第一步 npm i webpack webpack-cli -D 安装webpack依赖
+第二步 配置webpack.config.js 配置项
+entry：入口文件
+output：输出文件（打包之后文件存放地）
+module：配置项
+    解析react中的 .js|.jsx文件
+plugins：插件
+devServer：热更新配置
