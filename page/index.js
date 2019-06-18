@@ -39,7 +39,7 @@ class Index extends React.PureComponent {
   }
 }
 export default connect((store) => {
-  return { indexData: store.RenderData }
+  return { indexData: store.RenderTest }
 }, {
   renderData: IndexAction.RenderData
 })(Index)
