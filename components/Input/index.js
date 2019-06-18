@@ -1,5 +1,6 @@
 import React from 'react'
-import './index.less'
+// import styles from'./index.less'
+import { NavLink } from 'react-router-dom'
 
 class Input extends React.Component {
     state = {
@@ -38,6 +39,9 @@ class Input extends React.Component {
                 {error && <span className={'text'}>
                     {message || this.state.message}
                 </span>}
+                <div>
+                    <NavLink to='/'>to Home</NavLink>
+                </div>
             </div>
         )
     }

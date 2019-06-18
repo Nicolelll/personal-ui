@@ -28,10 +28,18 @@ module.exports = {
                     }, {
                         loader: 'css-loader',
                     }, {
-                        loader: 'less-loader'
+                        loader: 'less-loader',
+                        options: {
+                            javascriptEnabled: true
+                          }
                     }],
-					exclude: /node_modules/,
-				}, 
+                    include: [path.join(__dirname, 'src'), path.join(__dirname, 'node_modules/antd')]
+                }, 
+                {
+                    test: /\.css$/,
+                    use: ['style-loader', 'css-loader'],
+                    include: [path.join(__dirname, 'src'), path.join(__dirname, 'node_modules/antd')]
+                }
     ]
     },
     plugins: [
