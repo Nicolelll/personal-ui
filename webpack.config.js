@@ -27,19 +27,17 @@ module.exports = {
                         loader: 'style-loader',
                     }, {
                         loader: 'css-loader',
+                        options: {
+                            // modules: true
+                        }
                     }, {
                         loader: 'less-loader',
                         options: {
                             javascriptEnabled: true
                           }
                     }],
-                    include: [path.join(__dirname, 'src'), path.join(__dirname, 'node_modules/antd')]
+                    include: [path.join(__dirname, 'components/'), path.join(__dirname, 'node_modules/antd')]
                 }, 
-                {
-                    test: /\.css$/,
-                    use: ['style-loader', 'css-loader'],
-                    include: [path.join(__dirname, 'src'), path.join(__dirname, 'node_modules/antd')]
-                }
     ]
     },
     plugins: [
