@@ -1,7 +1,5 @@
 import React from 'react'
-import './index.less'
-import { NavLink } from 'react-router-dom'
-
+import styles from './index.less'
 class Input extends React.Component {
     state = {
         error: true,
@@ -20,11 +18,16 @@ class Input extends React.Component {
         return null
     }
     handleChange(regex) {
-        if (regex) {
-            this.setState({
-                error: regex.test(event.target.value) ? false : true
-            })
-        }
+			if (regex) {
+				this.setState({
+					error: regex.test(event.target.value) ? false : true
+				}, 
+				() => this.state.error ? this.handleError() : null
+				)
+			}
+    }
+    handleError () {
+        this.props.onError()
     }
     render() {
         const { type, message } = this.props
@@ -32,14 +35,13 @@ class Input extends React.Component {
         return (
             <div>
                 <input 
-                    className={error ? 'baseInput error' : 'baseInput'}
+                    className={error ? `${styles.error} ${styles.baseInput}` : styles.baseInput}
                     onChange={this.handleChange.bind(this, types.get(type))}
                     type={type}
                 />
-                {error && <span className={'text'}>
+                {error && <span className={styles.text}>
                     {message || this.state.message}
                 </span>}
-                <NavLink to='/'>to home</NavLink>
             </div>
         )
     }
