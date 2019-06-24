@@ -18,13 +18,13 @@ class Input extends React.Component {
         return null
     }
     handleChange(regex) {
-			if (regex) {
-				this.setState({
-					error: regex.test(event.target.value) ? false : true
-				}, 
-				() => this.state.error ? this.handleError() : null
-				)
-			}
+        if (regex) {
+            this.setState({
+                error: regex.test(event.target.value) ? false : true
+            }, 
+            () => this.state.error ? this.handleError() : null
+            )
+        }
     }
     handleError () {
         this.props.onError()

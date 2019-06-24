@@ -1,12 +1,18 @@
 import React from 'react';
 import classname from 'classname'
-import styles from './index.less'
+import './index.less'
 
-const defaultProps = {
-  prefix: 'flex-styles',
-  align: 'center'
-}
+/**
+ * 
+ * @param {align} props 
+ * @param {justify} props 
+ * @param {wrap} props 
+ */
 const Flex = (props) => {
+  const defaultProps = {
+    prefix: 'flex-styles',
+    align: 'center'
+  }
   const {
     align,
     justify,
