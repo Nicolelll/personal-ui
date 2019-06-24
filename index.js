@@ -1,14 +1,16 @@
 // import 'babel-polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Input from './components/Input'
+import Flex from './components/Flex'
 
 ReactDOM.render(
-    // <Flex align="space-around">
-    //     <div>1</div>
-    //     <div>1</div>
-    // </Flex>,
-    <Input />,
+    <Flex justify='between' wrap='wrap'>
+        <Flex>
+            <div>1</div>
+            <div>2</div>
+        </Flex>
+    </Flex>,
+    // <Input />,
     document.querySelector('#root')
 )
 
