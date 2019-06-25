@@ -11,7 +11,6 @@ import './index.less'
 const Flex = (props) => {
   const defaultProps = {
     prefix: 'flex-styles',
-    align: 'center'
   }
   const {
     align,

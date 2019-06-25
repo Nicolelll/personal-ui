@@ -4,11 +4,12 @@ import ReactDOM from 'react-dom'
 import Flex from './components/Flex'
 
 ReactDOM.render(
-    <Flex justify='between' wrap='wrap'>
+    <Flex justify='around' wrap='wrap'>
         <Flex>
             <div>1</div>
             <div>2</div>
         </Flex>
+        <div>3</div>
     </Flex>,
     // <Input />,
     document.querySelector('#root')
