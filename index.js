@@ -1,6 +1,7 @@
 // import 'babel-polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Select from './components/Select/select'
 import Flex from './components/Flex'
 
 ReactDOM.render(
@@ -9,7 +10,7 @@ ReactDOM.render(
             <div>1</div>
             <div>2</div>
         </Flex>
-        <div>3</div>
+        <Select>3</Select>
     </Flex>,
     // <Input />,
     document.querySelector('#root')
